@@ -44,17 +44,17 @@ void FIRST(char c,int q1,int q2)
 		{
 			if(prodn[j][2]=='$')
 			{
-			  if(prodn[q1][q2]=='\0')
-			     first[n++]='$';
-			else if(prodn[q1][q2]!='\0' && (q1!=0 || q2!=0))
-				FIRST(prodn[q1][q2],q1,(q2+1));
-			else
-			  first[n++]='$';
+			  	if(prodn[q1][q2]=='\0')
+			     	first[n++]='$';
+				else if(prodn[q1][q2]!='\0' && (q1!=0 || q2!=0))
+					FIRST(prodn[q1][q2],q1,(q2+1));
+				else
+			  		first[n++]='$';
 		    }
 	       	else if(islower(prodn[j][2]))
-			 first[n++]=prodn[j][2];
+			 	first[n++]=prodn[j][2];
 			else
-			 FIRST(prodn[j][2],j,3);
+			 	FIRST(prodn[j][2],j,3);
 		}
 	}
 }
